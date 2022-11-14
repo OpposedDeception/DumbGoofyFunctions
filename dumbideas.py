@@ -1,5 +1,6 @@
 from random import randint
 from itertools import counter
+from colorama import Back, Fore, init
 
 # Basically, it prints 4 lists with random value, and every list should have technically bigger number
 # But at the end it gives ValueError for some reason. I'll resolve it someday.
@@ -19,25 +20,45 @@ def ranlist():
         input("Press ENTER to exit")
         exit()
         
-# It will count values. I'll finish this ASAP
-def data_couner(x, y):
-    data_1 = [x]
-    data_2 = [y]
-    return data_1 + data_2
-
-print("1. Output strange result")
-print("2. Count data")
-choice = ('1', '2')
+# Counter function is finished!
+def counter(integer):
+    for i in count(integer):
+        print(i, end=' ')
+        if i > limit():
+            print()
+            break
+            
+# Counter limit, to prevent from several issues.            
+def limit(counter):
+    if len(counter()) > 50:
+        print("Too big value")
+        
+ def printOnNewLine(string):
+    resultion = print(f'\n'.join
+                      {string})
+    if string != str:
+        raise TypeError('You can only enter string values, such as "string" ')
+     return resultion
+            
+init(convert=True)
+    
+print(Back.CYAN + Fore.BLACK + '1. Output strange result')
+print(Back.CYAN + Fore.BLACK + '2. Count integers')
+print(Back.CYAN + Fore.BLACK + '3. Print character on new line')
+choice = ('1', '2', '3')
 user_choice = int(input("Write your choice: "))
 
 try:
-    if user_choice == 1:
+    if user_choice in choice == 1:
       ranlist()
-      if user_choice == 2:
+    elif user_choice in choice == 2:
             NUM1 = float(input("Type first number: "))
-            NUM2 = float(input("Type second number: "))
-            result = data_counter(NUM1, NUM2)
+            result = counter(NUM1)
             print(result)
+     elif user_choice in choice == 3:
+        user_result = str(input("Write what string you want to input: "))
+        result_of_the_user = printOnNewLine(user_result)
+        print(result_of_the_user)        
 except ValueError:
     print("You had to write a number")
     input("Press ENTER to exit")
@@ -45,3 +66,4 @@ except ValueError:
 
 # Function 1 - 11.11.2022
 # Function 2 - 13.11.2022
+# Function 3, 4 and 5 - 14.11.2022
