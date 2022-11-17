@@ -33,12 +33,12 @@ def limit(counter):
     if len(counter()) > 50:
         print("Too big value")
         
- def printOnNewLine(string):
-    resultion = print(f'\n'.join
+def printOnNewLine(string):
+   resultion = print(f'\n'.join
                       {string})
-    if string != str:
-        raise TypeError('You can only enter string values, such as "string" ')
-     return resultion
+   if string != str:
+       raise TypeError('You can only enter string values, such as "string" ')
+    return resultion
             
 init(convert=True)
     
@@ -55,10 +55,10 @@ try:
             NUM1 = float(input("Type first number: "))
             result = counter(NUM1)
             print(result)
-     elif user_choice in choice == 3:
-        user_result = str(input("Write what string you want to input: "))
-        result_of_the_user = printOnNewLine(user_result)
-        print(result_of_the_user)        
+    elif user_choice in choice == 3:
+       user_result = str(input("Write what string you want to input: "))
+       result_of_the_user = printOnNewLine(user_result)
+       print(result_of_the_user)        
 except ValueError:
     print("You had to write a number")
     input("Press ENTER to exit")
