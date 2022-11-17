@@ -29,7 +29,7 @@ def counter(integer):
             break
             
 # Counter limit, to prevent from several issues.            
-def limit(counter):
+def limit(counter()):
     if len(counter()) > 104:
         print("Too big value")
         
