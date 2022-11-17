@@ -30,7 +30,7 @@ def counter(integer):
             
 # Counter limit, to prevent from several issues.            
 def limit(counter):
-    if len(counter()) > 50:
+    if len(counter()) > 104:
         print("Too big value")
         
 def printOnNewLine(string):
@@ -38,7 +38,9 @@ def printOnNewLine(string):
                       {string})
    if string != str:
        raise TypeError('You can only enter string values, such as "string" ')
-    return resultion
+   else:
+       pass
+   return resultion
             
 init(convert=True)
     
